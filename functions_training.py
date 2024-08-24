@@ -38,6 +38,7 @@ def save_user(**user):
 
 save_user(id=1, name='timmy', age=33)
 
+
 def fizz_buzz(input):
     if (input % 3 == 0) and (input % 5 == 0):
         return 'fizzbuzz'
@@ -52,4 +53,3 @@ print(fizz_buzz(3))
 print(fizz_buzz(5))
 print(fizz_buzz(15))
 print(fizz_buzz(7))
-

@@ -1,5 +1,6 @@
 """learning different data structures"""
 
+
 letters = ['a', 'b', 'c']
 matrix = [[0, 1], [2, 3]]
 zeros = [0] * 10
@@ -67,34 +68,51 @@ def list_find(list):
 
 # list_find(numbers)
 
-#sorting lists
+
+# sorting lists
 random_numbers = [3, 6, 1, 8, 4, 10]
 new_sorted_list = sorted(random_numbers)
 random_numbers.sort(reverse=True)
 # print(random_numbers)
-# print(new_sorted_list)  
+# print(new_sorted_list)
 
 items = [
     ('product1', 10),
     ('product2', 9),
     ('product3', 12)
 ]
-#basic way of doing it
+# basic way of doing it
 # def sort_items(item):
 #     return item[1]
 
-#better way of doing it
+# better way of doing it
 items.sort(key=lambda item: item[1])
 # print(items)
 
-#map
+# map
 prices = list(map(lambda item: item[1], items))
-#list comprehension way (better practice in python)
+# list comprehension way (better practice in python)
 prices = [item[1] for item in items]
-print(prices)
+# print(prices)
 
-#filter
+# filter
 filtered = list(filter(lambda item: item[1] >= 10, items))
-#list comprehension way (better practice in python)
+# list comprehension way (better practice in python)
 filtered = [item for item in items if item[1] >= 10]
-print(filtered)
+# print(filtered)
+
+# zip
+list1 = [1, 2, 3]
+list2 = [10, 20, 30]
+# print(list(zip('abc', list1, list2)))
+
+# stack (LIFO = Last In First Out)
+browsing_session = []
+browsing_session.append(1)
+browsing_session.append(2)
+browsing_session.append(3)
+# print(browsing_session)
+last = browsing_session.pop()
+if not browsing_session:
+    browsing_session[-1]
+# print(browsing_session)

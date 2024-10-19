@@ -19,8 +19,7 @@ point = (1, 2, 3)
 x = 5
 y = 10
 x, y = y, x
-print(f'y: {y}, x:{
-      x} as you can see they are not the same value as originally stated, they have been swapped')
+print(f'y: {y}, x:{x} as you can see they are not the same value as originally stated, they have been swapped')
 
 # arrays better for large list of numbers > 10000 ish (use only if you are having preformance problems)
 # need to be imported
@@ -54,3 +53,28 @@ del point2['x']
 print(point2)
 for key in point2:
     print(key, point2[key])
+
+# unpacking operator dictonaries needs ** for unpacking
+print(numbers_2)
+print(*numbers_2)
+values = [*range(5), *'hello']
+print(values)
+
+
+# exercise write programm that finds the most repeated letter in a text
+from pprint import pprint # can be used to make things look prettier in the output
+sentence = "this is a common interview question"
+
+char_frequency = {}
+for char in sentence:
+    if char in char_frequency:
+        char_frequency[char] += 1
+    else:
+        char_frequency[char] = 1
+
+char_frequency_sorted = sorted(
+    char_frequency.items(), 
+    key=lambda kv:kv[1], 
+    reverse=True)
+print(char_frequency_sorted[0])
+

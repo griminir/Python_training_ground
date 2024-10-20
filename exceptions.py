@@ -2,16 +2,15 @@
 # numbers = [1,2]
 # print(numbers[3])
 
-# try:
-#     with open('exceptions.py') as file:
-#         print('file opened.')
-#     age = int(input('age: '))
-#     xfactor = 10/age
-# except (ValueError, ZeroDivisionError):
-#     print('you did not enter a valid age')
-# else:
-#     print(f'no expections where thrown and age is {age}')
-
+try:
+    with open('exceptions.py') as file:
+        print('file opened.')
+    age = int(input('age: '))
+    xfactor = 10/age
+except (ValueError, ZeroDivisionError):
+    print('you did not enter a valid age')
+else:
+    print(f'no expections where thrown and age is {age}')
 from timeit import timeit
 
 code1 = '''
